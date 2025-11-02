@@ -14,8 +14,9 @@ export default function Hero() {
 
         if (guestParam) {
             try {
-                const decodedName = safeBase64.decode(guestParam);
-                setGuestName(decodedName);
+                // const decodedName = safeBase64.decode(guestParam);
+                // setGuestName(decodedName);
+                setGuestName(guestParam);
             } catch (error) {
                 console.error('Error decoding guest name:', error);
                 setGuestName('');

@@ -18,7 +18,8 @@ import { useState, useEffect } from 'react';
 import { formatEventDate } from '@/lib/formatEventDate';
 
 // URL Web App Google Apps Script Anda telah dimasukkan di sini
-const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbxcxqPdPQ5cKEmdK5WbJD7G2kFDcvInFjAseiqh4cFot3VVapnHEX2KqrN8jAUCkRl9TA/exec';
+// const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbxcxqPdPQ5cKEmdK5WbJD7G2kFDcvInFjAseiqh4cFot3VVapnHEX2KqrN8jAUCkRl9TA/exec';
+const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbwNeC5N8YDya8ijGGEqnwJx4A0aL3s58eiyJ-ZBo-3KMARxRdsGrn0Vi25R8s8Xqpf86Q/exec';
 
 export default function Wishes() {
     const [showConfetti, setShowConfetti] = useState(false);
@@ -46,8 +47,7 @@ export default function Wishes() {
         setError(null);
         try {
             const response = await fetch(SHEET_API_URL, {
-                method: 'GET',
-                mode: 'cors',
+                method: 'GET'
             });
 
             if (!response.ok) {
@@ -92,10 +92,10 @@ export default function Wishes() {
 
         try {
             const response = await fetch(SHEET_API_URL, {
-                method: 'POST',
-                mode: 'cors',
+                redirect: "follow",
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "text/plain;charset=utf-8",
                 },
                 body: JSON.stringify(payload),
             });
@@ -121,7 +121,7 @@ export default function Wishes() {
             }
         } catch (err) {
             console.error("Submission failed:", err);
-            setError("Gagal mengirim pesan. Cek koneksi Anda atau pastikan Apps Script sudah ter-deploy dengan benar.");
+            setError("Gagal mengirim pesan. Cek koneksi Anda.");
         } finally {
             setIsSubmitting(false);
         }
@@ -132,9 +132,7 @@ export default function Wishes() {
 
         switch (normalizedStatus) {
             case 'attending':
-            case 'attending':
                 return <CheckCircle className="w-4 h-4 text-emerald-500" />;
-            case 'not-attending':
             case 'not_attending':
                 return <XCircle className="w-4 h-4 text-rose-500" />;
             case 'maybe':
