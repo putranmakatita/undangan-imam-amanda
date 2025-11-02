@@ -12,18 +12,18 @@ import { useState, useEffect } from 'react';
 export default function Gifts() {
     const [copiedAccount, setCopiedAccount] = useState(null);
     const [hasAnimated, setHasAnimated] = useState(false);
-    
+
     // Set animation to run once on component mount
     useEffect(() => {
         setHasAnimated(true);
     }, []);
-    
+
     const copyToClipboard = (text, bank) => {
         navigator.clipboard.writeText(text);
         setCopiedAccount(bank);
         setTimeout(() => setCopiedAccount(null), 2000);
     };
-    
+
     return (<>
         <section id="gifts" className="min-h-screen relative overflow-hidden">
             <div className="container mx-auto px-4 py-20 relative z-10">
@@ -78,7 +78,7 @@ export default function Gifts() {
 
                         {/* Main Message */}
                         <p className="text-gray-600 leading-relaxed">
-                            Insya Allah, Kami Akan Menyalurkan Semua Hadiah yang Diberikan ke Beberapa Masjid dan Lembaga yang Membutuhkan
+                            Insya Allah, Tanda Kasih yang Bapak/Ibu/Saudara/i berikan akan menjadi doa restu terbaik bagi perjalanan baru kami.
                         </p>
 
                         {/* Arabic Dua */}

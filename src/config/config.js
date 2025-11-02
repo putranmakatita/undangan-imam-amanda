@@ -22,7 +22,7 @@ const config = {
     maps_embed:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d703.761757405055!2d102.26344376999101!3d-3.7932530318632867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e36b0237bdad177%3A0x62eac13728525979!2sJl.%20Al-Furqon%2C%20Kebun%20Dahri%2C%20Kec.%20Ratu%20Samban%2C%20Kota%20Bengkulu%2C%20Bengkulu%2038114!5e0!3m2!1sen!2sid!4v1761279119132!5m2!1sen!2sid",
     // Event time (free format, example: "10:00 - 12:00 WIB")
-    time: "16:16 - 17:30 WIB",
+    time: "08:00 - 14:00 WIB",
     // Venue/building name
     location: "",
     // Full address of the wedding venue
@@ -43,7 +43,7 @@ const config = {
         // End time (format: HH:MM)
         endTime: "09:00",
         // Event venue
-        location: "",
+        location: "Masjid Al-Furqon Kebun Dahri",
         // Full address
         address: "Jl. Al-Furqon No.02 RT.04 RW.01 Kelurahan Kebun Dahri, Kecamatan Ratu Samban, Kota Bengkulu",
       },
@@ -51,9 +51,9 @@ const config = {
         // Second event name
         title: "Resepsi Nikah",
         date: "2025-11-23",
-        startTime: "09:00",
+        startTime: "10:00",
         endTime: "14:00",
-        location: "",
+        location: "Kebun Dahri Kota Bengkulu",
         address: "Jl. Al-Furqon No.02 RT.04 RW.01 Kelurahan Kebun Dahri, Kecamatan Ratu Samban, Kota Bengkulu",
       }
       // You can add more agenda items with the same format

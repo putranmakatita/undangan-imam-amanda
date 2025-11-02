@@ -10,7 +10,7 @@ export default function Hero() {
 
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
-        const guestParam = urlParams.get('guest');
+        const guestParam = urlParams.get('to');
 
         if (guestParam) {
             try {
